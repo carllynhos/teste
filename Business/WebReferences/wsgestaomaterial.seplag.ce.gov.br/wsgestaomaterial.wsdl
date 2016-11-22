@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s0="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" xmlns:intf="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" xmlns:tns1="urn:bean.local" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <q1:schema targetNamespace="urn:bean.local" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="http://xml.apache.org/xml-soap" />
+      <q1:import namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" />
+      <q1:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <q1:complexType name="VwDadosWebService">
+        <q1:sequence>
+          <q1:element name="codigoCategoria" nillable="true" type="q1:decimal" />
+          <q1:element name="codigoClasse" nillable="true" type="q1:decimal" />
+          <q1:element name="codigoGrupo" nillable="true" type="q1:decimal" />
+          <q1:element name="codigoItem" nillable="true" type="q1:decimal" />
+          <q1:element name="codigoMaterial" nillable="true" type="q1:decimal" />
+          <q1:element name="descricaoItem" nillable="true" type="q1:string" />
+          <q1:element name="nomeCategoria" nillable="true" type="q1:string" />
+          <q1:element name="nomeClasse" nillable="true" type="q1:string" />
+          <q1:element name="nomeGrupo" nillable="true" type="q1:string" />
+          <q1:element name="nomeMaterial" nillable="true" type="q1:string" />
+          <q1:element name="tipoCategoria" nillable="true" type="q1:string" />
+          <q1:element name="unidadeFornecimento" nillable="true" type="q1:string" />
+        </q1:sequence>
+      </q1:complexType>
+    </q1:schema>
+    <q1:schema targetNamespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="urn:bean.local" />
+      <q1:import namespace="http://xml.apache.org/xml-soap" />
+      <q1:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <q1:complexType name="ArrayOf_xsd_anyType">
+        <q1:complexContent mixed="false">
+          <q1:restriction base="soapenc:Array">
+            <q1:attribute xmlns:d7p1="http://schemas.xmlsoap.org/wsdl/" xmlns:d7p2="http://schemas.xmlsoap.org/wsdl/" xmlns:d7p3="http://schemas.xmlsoap.org/wsdl/" d7p4:arrayType="q1:anyType[]" ref="soapenc:arrayType" xmlns:d7p4="http://schemas.xmlsoap.org/wsdl/" />
+          </q1:restriction>
+        </q1:complexContent>
+      </q1:complexType>
+    </q1:schema>
+    <q1:schema targetNamespace="http://xml.apache.org/xml-soap" xmlns:q1="http://www.w3.org/2001/XMLSchema">
+      <q1:import namespace="urn:bean.local" />
+      <q1:import namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" />
+      <q1:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <q1:complexType name="Vector">
+        <q1:sequence>
+          <q1:element minOccurs="0" maxOccurs="unbounded" name="item" type="q1:anyType" />
+        </q1:sequence>
+      </q1:complexType>
+    </q1:schema>
+  </types>
+  <message name="consultaItemPorExpressaoResponse">
+    <part name="consultaItemPorExpressaoReturn" type="intf:ArrayOf_xsd_anyType" />
+  </message>
+  <message name="consultaItemPorCodigoRequest">
+    <part name="codigoItem" type="xsd:int" />
+  </message>
+  <message name="consultaItemPorTodasPalavrasResponse">
+    <part name="consultaItemPorTodasPalavrasReturn" type="intf:ArrayOf_xsd_anyType" />
+  </message>
+  <message name="consultaItemPorQualquerPalavraRequest">
+    <part name="palavrasDigitadas" type="xsd:string" />
+  </message>
+  <message name="consultaItemPorTodasPalavrasRequest">
+    <part name="palavrasDigitadas" type="xsd:string" />
+  </message>
+  <message name="consultaItemPorCodigoResponse">
+    <part name="consultaItemPorCodigoReturn" type="intf:ArrayOf_xsd_anyType" />
+  </message>
+  <message name="consultaItemPorExpressaoRequest">
+    <part name="expressaoDigitada" type="xsd:string" />
+  </message>
+  <message name="getVwDadosWebServiceRequest" />
+  <message name="consultaItemPorQualquerPalavraResponse">
+    <part name="consultaItemPorQualquerPalavraReturn" type="intf:ArrayOf_xsd_anyType" />
+  </message>
+  <message name="getVwDadosWebServiceResponse">
+    <part name="getVwDadosWebServiceReturn" type="tns1:VwDadosWebService" />
+  </message>
+  <portType name="GestaoMaterialFacade">
+    <operation name="getVwDadosWebService">
+      <input name="getVwDadosWebServiceRequest" message="intf:getVwDadosWebServiceRequest" />
+      <output name="getVwDadosWebServiceResponse" message="intf:getVwDadosWebServiceResponse" />
+    </operation>
+    <operation name="consultaItemPorQualquerPalavra" parameterOrder="palavrasDigitadas">
+      <input name="consultaItemPorQualquerPalavraRequest" message="intf:consultaItemPorQualquerPalavraRequest" />
+      <output name="consultaItemPorQualquerPalavraResponse" message="intf:consultaItemPorQualquerPalavraResponse" />
+    </operation>
+    <operation name="consultaItemPorTodasPalavras" parameterOrder="palavrasDigitadas">
+      <input name="consultaItemPorTodasPalavrasRequest" message="intf:consultaItemPorTodasPalavrasRequest" />
+      <output name="consultaItemPorTodasPalavrasResponse" message="intf:consultaItemPorTodasPalavrasResponse" />
+    </operation>
+    <operation name="consultaItemPorExpressao" parameterOrder="expressaoDigitada">
+      <input name="consultaItemPorExpressaoRequest" message="intf:consultaItemPorExpressaoRequest" />
+      <output name="consultaItemPorExpressaoResponse" message="intf:consultaItemPorExpressaoResponse" />
+    </operation>
+    <operation name="consultaItemPorCodigo" parameterOrder="codigoItem">
+      <input name="consultaItemPorCodigoRequest" message="intf:consultaItemPorCodigoRequest" />
+      <output name="consultaItemPorCodigoResponse" message="intf:consultaItemPorCodigoResponse" />
+    </operation>
+  </portType>
+  <binding name="wsgestaomaterialSoapBinding" type="intf:GestaoMaterialFacade">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getVwDadosWebService">
+      <wsdlsoap:operation soapAction="" />
+      <input name="getVwDadosWebServiceRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://facade.wsgestaomaterial.seplag.ce.gov.br" use="encoded" />
+      </input>
+      <output name="getVwDadosWebServiceResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" use="encoded" />
+      </output>
+    </operation>
+    <operation name="consultaItemPorQualquerPalavra">
+      <wsdlsoap:operation soapAction="" />
+      <input name="consultaItemPorQualquerPalavraRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://facade.wsgestaomaterial.seplag.ce.gov.br" use="encoded" />
+      </input>
+      <output name="consultaItemPorQualquerPalavraResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" use="encoded" />
+      </output>
+    </operation>
+    <operation name="consultaItemPorTodasPalavras">
+      <wsdlsoap:operation soapAction="" />
+      <input name="consultaItemPorTodasPalavrasRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://facade.wsgestaomaterial.seplag.ce.gov.br" use="encoded" />
+      </input>
+      <output name="consultaItemPorTodasPalavrasResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" use="encoded" />
+      </output>
+    </operation>
+    <operation name="consultaItemPorExpressao">
+      <wsdlsoap:operation soapAction="" />
+      <input name="consultaItemPorExpressaoRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://facade.wsgestaomaterial.seplag.ce.gov.br" use="encoded" />
+      </input>
+      <output name="consultaItemPorExpressaoResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" use="encoded" />
+      </output>
+    </operation>
+    <operation name="consultaItemPorCodigo">
+      <wsdlsoap:operation soapAction="" />
+      <input name="consultaItemPorCodigoRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://facade.wsgestaomaterial.seplag.ce.gov.br" use="encoded" />
+      </input>
+      <output name="consultaItemPorCodigoResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" use="encoded" />
+      </output>
+    </operation>
+  </binding>
+  <service name="GestaoMaterialFacadeService">
+    <port name="wsgestaomaterial" binding="intf:wsgestaomaterialSoapBinding">
+      <wsdlsoap:address location="http://wsgestaomaterial.seplag.ce.gov.br/wsgestaomaterial/services/wsgestaomaterial" />
+    </port>
+  </service>
+</definitions>

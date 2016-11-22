@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/cti/diogolima/Projetos/licitar2/bin/Licitar</name>
+    </assembly>
+    <members>
+        <member name="T:Licitar.SrvActiveRecord">
+            <summary>
+            Serviço de configuração do ActiveRecord.
+            </summary>
+        </member>
+        <member name="M:Licitar.SrvActiveRecord.#ctor">
+            <summary>
+            Construtor padrão.
+            </summary>
+        </member>
+        <member name="M:Licitar.SrvActiveRecord.CarregarEntidades">
+            <summary>
+            Carrega as entidades que utilizam ActiveRecord no sistema.
+            </summary>
+        </member>
+        <member name="T:Licitar.Conexao">
+            <summary>
+            Classe de controle das opções de conexão ao banco de dados.
+            </summary>
+        </member>
+        <member name="M:Licitar.Conexao.#ctor">
+            <summary>
+            Construtor Padrão
+            </summary>
+        </member>
+        <member name="M:Licitar.Conexao.GetConfigSource">
+            <summary>
+            Configura o ActiveRecord e o NHibernate para conexão.
+            </summary>
+            <returns>
+            A <see cref="T:Castle.ActiveRecord.Framework.Config.InPlaceConfigurationSource" /></returns>
+        </member>
+        <member name="M:Licitar.Conexao.GetServidor">
+            <summary>
+            Retorna o ambiente onde a aplicação está rodando.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /></returns>
+        </member>
+        <member name="T:Licitar.BaseDao">
+            <summary>
+            Classe base de conexão ao banco de dados, e de execução de comandos e pesquisas no mesmo.
+            <TODO>Incluir a identificação automática de ambiente para carregamento das configurações de ambiente</TODO></summary>
+        </member>
+        <member name="M:Licitar.BaseDao.CriarConexao">
+            <summary>
+            Cria a conexão com o banco.
+            </summary>
+            <returns>
+            A <see cref="T:Npgsql.NpgsqlConnection" /></returns>
+        </member>
+        <member name="M:Licitar.BaseDao.Consultar(System.String)">
+            <summary>
+            Realiza uma consulta no banco.
+            </summary>
+            <returns>
+            Um <see cref="T:Npgsql.NpgsqlDataReader" /> com os dados gerados pela consulta.
+            </returns>
+        </member>
+        <member name="M:Licitar.BaseDao.ConsultarDT(System.String)">
+            <summary>
+            Realiza uma consulta no banco.
+            </summary>
+            <returns>
+            Um DataTable com os dados gerados pela consulta.
+            </returns>
+        </member>
+        <member name="M:Licitar.BaseDao.Nextval(System.String)">
+            <summary>
+            Consultar o NextVal da sequence informada. [A ser implementada]
+            </summary>
+            <param name="sequence">
+            A <see cref="T:System.String" /></param>
+            <returns>
+            A <see cref="T:System.Int32" /></returns>
+        </member>
+        <member name="T:Licitar.baseGraficos">
+            <summary>
+            Classe responsável pela geração de gráficos utilizando o componente especializado Graficos.
+            </summary>
+        </member>
+        <member name="M:Licitar.baseGraficos.RetornaGraficoPizza(System.String,System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            Gera um gráfico de Pizza com os dados fornecidos e salva uma imagem PNG do mesmo.
+            </summary>
+            <param name="titulo">
+            A <see cref="T:System.String" /></param>
+            <param name="dados">
+            A <see cref="T:System.Data.DataTable" /></param>
+            <returns>
+            A <see cref="T:System.String" /></returns>
+        </member>
+        <member name="M:Licitar.baseGraficos.RetornaGraficoColunas(System.String,System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            Gera um gráfico de Colunas com os dados fornecidos e salva uma imagem PNG do mesmo.
+            </summary>
+            <param name="titulo">
+            A <see cref="T:System.String" /></param>
+            <param name="dados">
+            A <see cref="T:System.Data.DataTable" /></param>
+            <returns>
+            A <see cref="T:System.String" /></returns>
+        </member>
+        <member name="M:Licitar.baseGraficos.RetornaGraficoLinhas(System.String,System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            Gera um gráfico de Linhas com os dados fornecidos e salva uma imagem PNG do mesmo.
+            </summary>
+            <param name="titulo">
+            A <see cref="T:System.String" /></param>
+            <param name="dados">
+            A <see cref="T:System.Data.DataTable" /></param>
+            <returns>
+            A <see cref="T:System.String" /></returns>
+        </member>
+        <member name="T:Licitar.ConsultaXML">
+            <summary>
+            Classe de consulta �s instru��es SQL armazenadas em XML.
+            Possibilita manter todas as instru��es SQL padr�o armazenadas e facilmente atualiz�veis,
+            sem necessidade de interven��o no sistema.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultaXML.retornarSQL(System.String)">
+            <summary>
+            Pesquisa uma instru��o no arquivos XML de instru��es SQL.
+            </summary>
+            <param name="idComando">
+            Um <see cref="T:System.String" /> com o identificados da instru��o buscada.
+            </param>
+            <returns>
+            Um <see cref="T:System.String" /> com a instru��o desejada, ou nulo caso a mesma n�o exista no XML.
+            </returns>
+        </member>
+        <member name="T:Licitar.Principal">
+            <summary>
+            Master Page padrão do projeto.
+            </summary>
+        </member>
+        <member name="T:Licitar.ConsultasGerais">
+            <summary>
+            Agrupa todas as funções de consulta genéricas e padrão, baseadas na consulta ao XML
+            responsável por armazenar as instruções de consulta da aplicação.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.ListarUnidadesExercicio">
+            <summary>
+            Retorna um DataReader com todas as Unidades de Exercício disponíveis.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.ListarMotivosConclusao">
+            <summary>
+            Retorna um DataReader com todos os Motivos de Conclusão
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.ListarInstituicoes">
+            <summary>
+            Retorna um DataReader com todas as Instituicoes.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.ListarNatureza">
+            <summary>
+            Retorna um DataReader com todas as Instituicoes.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.ListarModalidades">
+            <summary>
+            Retorna um DataReader com todas as modalidades que aparecem no tabelão.
+            </summary>
+        </member>
+        <member name="M:Licitar.ConsultasGerais.AndamentoLicitacoes(System.String,System.String)">
+            <summary>
+            Consulta os andamentos das licitações, filtrado por Unidade de Exercício e por Modalidade.
+            </summary>
+            <param name="unidadeExercicio">
+            Um número inteiro que representa o ID da Unidade de Exercício desejada.
+            </param>
+            <param name="Modalidade">
+            Um número inteiro que representa o ID da Modalidade desejada.
+            </param>
+            <returns>
+            Um DataReader com os dados retornados pelo banco.
+            </returns>
+        </member>
+        <member name="T:Licitar.DAORelatorioGerencial">
+            <summary>
+            Classe responsável por fornecer os métodos e estruturas do relatório gerencial customizável.
+            </summary>
+        </member>
+        <member name="M:Licitar.DAORelatorioGerencial.listarTabelao(System.String,System.String,System.String,System.String)">
+            <summary>
+            Consulta os dados do relatório gerencial, com as opções escolhidas pelo usuário no
+            assistente de consulta.
+            </summary>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> contendo os dados retornados pelo banco.
+            </returns>
+        </member>
+        <member name="M:Licitar.DAORelatorioGerencial.CamposRelatorio">
+            <summary>
+            Carrega e lista os campos do Relatório Gerencial.
+            </summary>
+            <returns>
+            Um <see cref="T:Licitar.camposRelatorioGerencial[]" /> que contém a coleção de campos disponíveis
+            para o relatório.
+            </returns>
+        </member>
+        <member name="T:Licitar.camposRelatorioGerencial">
+            <summary>
+            Classe com a estrutura de armazenamento dos campso do relatório.
+            </summary>
+        </member>
+        <member name="T:Licitar.filtroRelatorioGerencial">
+            <summary>
+            Classe com a estrutura de montagem dos filtros para o relatório gerencial.
+            </summary>
+        </member>
+        <member name="M:Licitar.filtroRelatorioGerencial.ModeloDescricao">
+            <summary>
+            Retorna a descrição para  modelo de comparativo para o filtro escolhido.
+            </summary>
+            <returns>
+            Uma <see cref="T:System.String" /> que descreve o modelo.
+            </returns>
+        </member>
+        <member name="T:Licitar.TotaisModalidades">
+            <summary>
+            serviço responsável pelos relatórios de Totais e Contagem de Processos Concluídos,
+            e seus respsctivos gráficos.
+            </summary>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.#ctor">
+            <summary>
+            Construtor Padrão
+            </summary>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.NumeroProcessosConcluidos">
+            <summary>
+            Conta e retorna todas as licitações concluídas agrupados por Modalidade
+            </summary>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações.
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.NumeroProcessosConcluidos(System.String,System.String)">
+            <summary>
+            Conta e retorna todas as licitações concluídas agrupados por Modalidade
+            e filtrado por período.
+            </summary>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> com ano e mês, sem barra, de início do período.
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> com ano e mês, sem barra, de final do período.
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações.
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.NumeroConcluidosPorSecretaria(System.String)">
+            <summary>
+            Conta e retorna todas as licitações concluídas agrupados por Secretaria
+            e filtrada por uma determinada Modalidade
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações.
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.NumeroConcluidosPorSecretaria(System.String,System.String,System.String)">
+            <summary>
+            Conta e retorna todas as licitações concluídas agrupados por Secretaria
+            e filtrada por uma determinada Modalidade e período
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> com ano e mês, sem barra, de início do período.
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> com ano e mês, sem barra, de final do período.
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações.
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.TotaisProcessosConcluidos">
+            <summary>
+            Calcula e retorna valores totais das licitações concluídas agrupado por modalidade
+            </summary>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.TotaisProcessosConcluidos(System.String,System.String)">
+            <summary>
+            Calcula e retorna valores totais das licitações concluídas agrupado por modalidade
+            e filtrado por período
+            </summary>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> representando o ano e mês de início sem barra
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> representando o ano e mês de término sem barra
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.TotaisProcessosConcluidosSecretaria(System.String)">
+            <summary>
+            Calcula e retorna valores totais das licitações concluídas agrupado por secretaria
+            e filtrado por modalidade
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.TotaisProcessosConcluidosSecretaria(System.String,System.String,System.String)">
+            <summary>
+            Calcula e retorna valores totais das licitações concluídas agrupado por secretaria
+            e filtrado por modalidade
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> representando o ano e mês de início sem barra
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> representando o ano e mês de término sem barra
+            </param>
+            <returns>
+            Um <see cref="T:System.Data.IDataReader" /> com a lista de licitações
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoNumeroProcessosConcluidos">
+            <summary>
+            Gera um gráfico de Pizza com o número de licitações concluídas por modalidade
+            </summary>
+            <returns>
+            Um <see cref="T:System.String" /> representando o local e nome da imagem PNG gerada
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoNumeroProcessosConcluidos(System.String)">
+            <summary>
+            Gera um gráfico de Pizza com o número de licitações concluídas por tipo de conclusão
+            filtrado por modalidade
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <returns>
+            Um <see cref="T:System.String" /> representando o local e nome da imagem PNG gerada
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoNumeroProcessosConcluidos(System.String,System.String)">
+            <summary>
+            Gera um gráfico de Pizza com o número de licitações concluídas por modalidade
+            filtrado por período
+            </summary>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> representando o ano e mês de início sem barra
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> representando o ano e mês de término sem barra
+            </param>
+            <returns>
+            Um <see cref="T:System.String" /> representando o local e nome da imagem PNG gerada
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoNumeroProcessosConcluidos(System.String,System.String,System.String)">
+            <summary>
+            Gera um gráfico de Pizza com o número de licitações concluídas por modalidade
+            filtrado por período e modalidade
+            </summary>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> representando o ano e mês de início sem barra
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> representando o ano e mês de término sem barra
+            </param>
+            <returns>
+            Um <see cref="T:System.String" /> representando o local e nome da imagem PNG gerada
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoNumeroProcessosConcluidos(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método protegido interno para geração do gráfico, especializado pelas diversas
+            formas de geração do mesmo.
+            </summary>
+            <param name="titulo">
+            Um <see cref="T:System.String" /> com o título desejado para o gráfico
+            </param>
+            <param name="Modalidade">
+            Um <see cref="T:System.String" /> com o nome da modalidade desejada
+            </param>
+            <param name="AnoMesInicio">
+            Um <see cref="T:System.String" /> representando o ano e mês de início sem barra
+            </param>
+            <param name="AnoMesFim">
+            Um <see cref="T:System.String" /> representando o ano e mês de término sem barra
+            </param>
+            <returns>
+            Um <see cref="T:System.String" /> representando o local e nome da imagem PNG gerada
+            </returns>
+        </member>
+        <member name="M:Licitar.TotaisModalidades.GraficoTotaisProcessosConcluidos">
+            <summary>
+            Gera um gráfico de Pizza com o número de licitações concluídas por modalidade
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /></returns>
+        </member>
+        <member name="T:Licitar.eMail">
+            <summary>
+            Classe para envio de email pelo .Net Framework
+            </summary>
+        </member>
+        <member name="M:Licitar.eMail.Enviar">
+            <summary>
+            Envia usando System.Net.Mail
+            </summary>
+        </member>
+        <member name="T:Licitar.Erro">
+            <summary>
+            Classe para captura de erros na aplica��o e alerta � equipe de desenvolvimento.
+            </summary>
+        </member>
+        <member name="P:Licitar.Erro.Usuario">
+            <value>
+            Usu�rio
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Browser">
+            <value>
+            Browser
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.VersaoBrowser">
+            <value>
+            Vers�o do Browser
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.SistemaOperacional">
+            <value>
+            Sistema Operacional
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.PaginaErro">
+            <value>
+            P�gina
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.MensagemErro">
+            <value>
+            Mensagem de Erro
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Data">
+            <value>
+            Data da Ocorr�ncia
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.MensagemApresentada">
+            <value>
+            Mensagem Apresentada
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Aplicacao">
+            <value>
+            Aplica��o
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Mensagem">
+            <value>
+            Mensagem do email
+            </value>
+        </member>
+    </members>
+</doc>

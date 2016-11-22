@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Business</RootNamespace>
+    <AssemblyName>Business</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="bin\Debug\Castle.ActiveRecord.dll" />
+    <None Include="bin\Debug\Castle.Components.Validator.dll" />
+    <None Include="bin\Debug\Castle.Core.dll" />
+    <None Include="bin\Debug\Castle.DynamicProxy.dll" />
+    <None Include="bin\Debug\Graficos.dll" />
+    <None Include="bin\Debug\Iesi.Collections.dll" />
+    <None Include="bin\Debug\Licitar.Business.dll" />
+    <None Include="bin\Debug\Licitar.Business.dll.mdb" />
+    <None Include="bin\Debug\log4net.dll" />
+    <None Include="bin\Debug\NHibernate.dll" />
+    <None Include="bin\Debug\Npgsql.dll" />
+    <None Include="bin\Debug\WebChart.dll" />
+    <None Include="bin\Debug\WebServiceSeplag.dll" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\css\lightbox.css" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\blank.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\close.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\closelabel.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\image-1.jpg" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\loading.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\next.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\nextlabel.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\prev.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\prevlabel.gif" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\thumb-1.jpg" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\images\Thumbs.db" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\js\effects.js" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\js\lightbox.js" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\js\prototype.js" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\js\scriptaculous.js" />
+    <None Include="Recursos\Componentes\Lightbox2.03.3\index.html" />
+    <None Include="Recursos\Componentes\Castle.ActiveRecord.dll" />
+    <None Include="Recursos\Componentes\Castle.Components.Validator.dll" />
+    <None Include="Recursos\Componentes\Castle.Core.dll" />
+    <None Include="Recursos\Componentes\Castle.DynamicProxy.dll" />
+    <None Include="Recursos\Componentes\FusionCharts.dll" />
+    <None Include="Recursos\Componentes\Graficos.dll" />
+    <None Include="Recursos\Componentes\Graficos.xml" />
+    <None Include="Recursos\Componentes\Iesi.Collections.dll" />
+    <None Include="Recursos\Componentes\log4net.dll" />
+    <None Include="Recursos\Componentes\NHibernate.dll" />
+    <None Include="Recursos\Componentes\Npgsql.dll" />
+    <None Include="Recursos\Componentes\PerformanceSistemas.dll" />
+    <None Include="Recursos\Componentes\PGE.ePGE.Utilidade.dll" />
+    <None Include="Recursos\Componentes\PGE.ePGE.Utilidade.dll.mdb" />
+    <None Include="Recursos\Componentes\SisafBusiness.dll" />
+    <None Include="Recursos\Componentes\srvCadastrarProcesso.dll" />
+    <None Include="Recursos\Componentes\WebChart.dll" />
+    <None Include="Recursos\Componentes\WebServiceSeplag.dll" />
+    <None Include="Recursos\Documentacao\Auditoria\AditoriaLicitar_tb_pessoa_pes.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\auditoria_licitar_tb_processo_andamento_pan.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\auditoria_licitar_tb_processo_papel_pessoa_ppp.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\auditoria_licitar_tb_valor_processo_vpr.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\AuditoriaLicitar_tb_numero_processo_npr.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\AuditoriaLicitar_tb_processo_pro.sql" />
+    <None Include="Recursos\Documentacao\Auditoria\AuditoriaLicitarScriptCompleto.sql" />
+    <None Include="Recursos\Documentacao\Tabelao_triggers\trigger_tb_area.sql" />
+    <None Include="Recursos\Documentacao\Tabelao_triggers\trigger_tb_fase.sql" />
+    <None Include="Recursos\Documentacao\Tabelao_triggers\trigger_tb_instituicao.sql" />
+    <None Include="Recursos\Documentacao\Views\ViewAgendaLicitar.sql" />
+    <None Include="Recursos\Documentacao\ClassDiagram.jpg" />
+    <None Include="Recursos\Documentacao\doc.xml" />
+    <None Include="Recursos\Documentacao\folhadeestilo.css" />
+    <None Include="Recursos\Documentacao\index.xml" />
+    <None Include="Recursos\Documentacao\Thumbs.db" />
+    <None Include="WebReferences\wsgestaomaterial.seplag.ce.gov.br\Reference.map" />
+    <None Include="WebReferences\wsgestaomaterial.seplag.ce.gov.br\wsgestaomaterial.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DAOConsultaProcesso.cs" />
+    <Compile Include="DAO\DAOExtratoProcesso.cs" />
+    <Compile Include="DAO\DAOGenerico.cs" />
+    <Compile Include="DAO\DAORelatorioGerencial.cs" />
+    <Compile Include="DTO\Relatorios\Filtro.cs" />
+    <Compile Include="DTO\Relatorios\Relatorio.cs" />
+    <Compile Include="DTO\DTOAgendaLicitacao.cs" />
+    <Compile Include="DTO\DTOArquivoVirtual.cs" />
+    <Compile Include="DTO\DTOAteLicitacaoMarcada.cs" />
+    <Compile Include="DTO\DTOCamposFormProcesso.cs" />
+    <Compile Include="DTO\DTOConProcesso.cs" />
+    <Compile Include="DTO\DTOExibirColunas.cs" />
+    <Compile Include="DTO\DtoExibirFiltros.cs" />
+    <Compile Include="DTO\DTOFiltroConProcesso.cs" />
+    <Compile Include="DTO\DTOFiltrosRelAteLicMarcada.cs" />
+    <Compile Include="DTO\DTOModuloAtividade.cs" />
+    <Compile Include="DTO\DTOProcessoAndamento.cs" />
+    <Compile Include="DTO\DTORelEstruturaCentralLicitacoes.cs" />
+    <Compile Include="DTO\DTORelLicitacao.cs" />
+    <Compile Include="DTO\DTORelLicitacaoMarcada.cs" />
+    <Compile Include="DTO\DTORelLicitacoesAndamentoPorPregoeiro.cs" />
+    <Compile Include="Entidade\AcompanhamentoProcesso.cs" />
+    <Compile Include="Entidade\Agenda.cs" />
+    <Compile Include="Entidade\Agrupamento.cs" />
+    <Compile Include="Entidade\AgrupamentoItem.cs" />
+    <Compile Include="Entidade\AndamentoPossivel.cs" />
+    <Compile Include="Entidade\Area.cs" />
+    <Compile Include="Entidade\Atividade.cs" />
+    <Compile Include="Entidade\AtividadeFuncaoPermissao.cs" />
+    <Compile Include="Entidade\AtividadePessoaPermissao.cs" />
+    <Compile Include="Entidade\AtividadeUnidadeExercicioPermissao.cs" />
+    <Compile Include="Entidade\AuditoriaSistema.cs" />
+    <Compile Include="Entidade\Auditorio.cs" />
+    <Compile Include="Entidade\Camera.cs" />
+    <Compile Include="Entidade\Classificacao.cs" />
+    <Compile Include="Entidade\ClassificacaoParticipante.cs" />
+    <Compile Include="Entidade\Configuracao.cs" />
+    <Compile Include="Entidade\ConsultarReceberTramitar.cs" />
+    <Compile Include="Entidade\Contato.cs" />
+    <Compile Include="Entidade\Fase.cs" />
+    <Compile Include="Entidade\FaseUnidadeExercicio.cs" />
+    <Compile Include="Entidade\FluxoAndamento.cs" />
+    <Compile Include="Entidade\FonteValor.cs" />
+    <Compile Include="Entidade\Frase.cs" />
+    <Compile Include="Entidade\FraseAndamento.cs" />
+    <Compile Include="Entidade\Funcao.cs" />
+    <Compile Include="Entidade\Instituicao.cs" />
+    <Compile Include="Entidade\Item.cs" />
+    <Compile Include="Entidade\Licitacao.cs" />
+    <Compile Include="Entidade\Modalidade.cs" />
+    <Compile Include="Entidade\ModalidadeUnidadeExercicio.cs" />
+    <Compile Include="Entidade\Modulo.cs" />
+    <Compile Include="Entidade\Moeda.cs" />
+    <Compile Include="Entidade\MotivoAndamento.cs" />
+    <Compile Include="Entidade\Natureza.cs" />
+    <Compile Include="Entidade\NumeroProcesso.cs" />
+    <Compile Include="Entidade\Papel.cs" />
+    <Compile Include="Entidade\PapelPessoa.cs" />
+    <Compile Include="Entidade\Permissao.cs" />
+    <Compile Include="Entidade\Pessoa.cs" />
+    <Compile Include="Entidade\Processo.cs" />
+    <Compile Include="Entidade\ProcessoAndamento.cs" />
+    <Compile Include="Entidade\ProcessoCompleto.cs" />
+    <Compile Include="Entidade\ProcessoCompletoReplica.cs" />
+    <Compile Include="Entidade\ProcessoPapelPessoa.cs" />
+    <Compile Include="Entidade\Situacao.cs" />
+    <Compile Include="Entidade\TipoAcompanhamento.cs" />
+    <Compile Include="Entidade\TipoAgrupamento.cs" />
+    <Compile Include="Entidade\TipoClassificacaoParticipante.cs" />
+    <Compile Include="Entidade\TipoLicitacao.cs" />
+    <Compile Include="Entidade\TipoNumero.cs" />
+    <Compile Include="Entidade\TipoUnidadeAdministrativa.cs" />
+    <Compile Include="Entidade\TipoValor.cs" />
+    <Compile Include="Entidade\TramitacaoUnidadeExercicio.cs" />
+    <Compile Include="Entidade\UnidadeAdministrativa.cs" />
+    <Compile Include="Entidade\UnidadeExercicio.cs" />
+    <Compile Include="Entidade\UnidadeExercicioFuncao.cs" />
+    <Compile Include="Entidade\UnidadeExercicioFuncaoPessoa.cs" />
+    <Compile Include="Entidade\ValorProcesso.cs" />
+    <Compile Include="Entidade\ValorReplica.cs" />
+    <Compile Include="Entidade\Workflow.cs" />
+    <Compile Include="Persistencia\ConsultaXML.cs" />
+    <Compile Include="Persistencia\DAOAssociacao.cs" />
+    <Compile Include="Persistencia\DAOConsultaProcesso.cs" />
+    <Compile Include="Persistencia\PostgreSqlConnection.cs" />
+    <Compile Include="Persistencia\PostgreSqlDatabase.cs" />
+    <Compile Include="Servico\ConsultasGerais.cs" />
+    <Compile Include="Servico\EcononomiaPregao.cs" />
+    <Compile Include="Servico\OrdenadorGenerico.cs" />
+    <Compile Include="Servico\ProcessarPermissoes.cs" />
+    <Compile Include="Servico\SrvAcesso.cs" />
+    <Compile Include="Servico\SrvAcompanhamentoProcesso.cs" />
+    <Compile Include="Servico\SrvAgenda.cs" />
+    <Compile Include="Servico\SrvAssociacaoGeral.cs" />
+    <Compile Include="Servico\SrvAtividade.cs" />
+    <Compile Include="Servico\SrvAtividadePessoaPermissao.cs" />
+    <Compile Include="Servico\SrvAtividadeUnidadeExercicioPermissao.cs" />
+    <Compile Include="Servico\SrvAtualizarDataEntradaPGE.cs" />
+    <Compile Include="Servico\SrvClassificacao.cs" />
+    <Compile Include="Servico\SrvContato.cs" />
+    <Compile Include="Servico\SrvData.cs" />
+    <Compile Include="Servico\SrvDigitalizacao.cs" />
+    <Compile Include="Servico\SrvDiretorios.cs" />
+    <Compile Include="Servico\SrvEmail.cs" />
+    <Compile Include="Servico\SrvFase.cs" />
+    <Compile Include="Servico\SrvFaseUnidadeExercicio.cs" />
+    <Compile Include="Servico\SrvFluxoAndamento.cs" />
+    <Compile Include="Servico\SrvFornecedor.cs" />
+    <Compile Include="Servico\SrvFrase.cs" />
+    <Compile Include="Servico\SrvFraseAndamento.cs" />
+    <Compile Include="Servico\SrvFtp.cs" />
+    <Compile Include="Servico\SrvFuncao.cs" />
+    <Compile Include="Servico\SrvFuncoesScript.cs" />
+    <Compile Include="Servico\SrvGerais.cs" />
+    <Compile Include="Servico\SrvInstituicao.cs" />
+    <Compile Include="Servico\SrvItem.cs" />
+    <Compile Include="Servico\SrvLayout.cs" />
+    <Compile Include="Servico\SrvLog.cs" />
+    <Compile Include="Servico\SrvMensagem.cs" />
+    <Compile Include="Servico\SrvModalidade.cs" />
+    <Compile Include="Servico\srvModulo.cs" />
+    <Compile Include="Servico\SrvMotivoAndamento.cs" />
+    <Compile Include="Servico\SrvNatureza.cs" />
+    <Compile Include="Servico\SrvNumeroProcesso.cs" />
+    <Compile Include="Servico\SrvOrdenacaoAtividade.cs" />
+    <Compile Include="Servico\SrvPapel.cs" />
+    <Compile Include="Servico\SrvPapelPessoa.cs" />
+    <Compile Include="Servico\SrvPermissao.cs" />
+    <Compile Include="Servico\SrvPessoa.cs" />
+    <Compile Include="Servico\SrvProcesso.cs" />
+    <Compile Include="Servico\SrvProcessoAndamento.cs" />
+    <Compile Include="Servico\SrvProcessoCompleto.cs" />
+    <Compile Include="Servico\SrvProcessoPapelPessoa.cs" />
+    <Compile Include="Servico\SrvRelatorio.cs" />
+    <Compile Include="Servico\SrvRelatorioGerencial.cs" />
+    <Compile Include="Servico\SrvRelGerencialLicitacoesAndamento.cs" />
+    <Compile Include="Servico\SrvTipoAcompanhamento.cs" />
+    <Compile Include="Servico\SrvTipoAndamento.cs" />
+    <Compile Include="Servico\SrvTipoLicitacao.cs" />
+    <Compile Include="Servico\SrvTipoNumero.cs" />
+    <Compile Include="Servico\SrvTipoUnidadeAdministrativa.cs" />
+    <Compile Include="Servico\SrvTramitacaoUnidadeExercicio.cs" />
+    <Compile Include="Servico\SrvTransmissao.cs" />
+    <Compile Include="Servico\SrvUnidadeAdministrativa.cs" />
+    <Compile Include="Servico\SrvUnidadeExercicio.cs" />
+    <Compile Include="Servico\SrvUnidadeExercicioFuncao.cs" />
+    <Compile Include="Servico\SrvUnidadeExercicioFuncaoPessoa.cs" />
+    <Compile Include="Servico\SrvValorProcesso.cs" />
+    <Compile Include="Servico\SrvWorkFlow.cs" />
+    <Compile Include="Servico\TotaisModalidades.cs" />
+    <Compile Include="Utilidade\ActiveRecord.cs" />
+    <Compile Include="Utilidade\Conexao.cs" />
+    <Compile Include="Utilidade\Criptografia.cs" />
+    <Compile Include="Utilidade\Data.cs" />
+    <Compile Include="Utilidade\eMail.cs" />
+    <Compile Include="Utilidade\Erros.cs" />
+    <Compile Include="Utilidade\Grafico.cs" />
+    <Compile Include="Utilidade\GridViewGroup.cs" />
+    <Compile Include="Utilidade\GridViewGroupList.cs" />
+    <Compile Include="Utilidade\GridViewHelper.cs" />
+    <Compile Include="Utilidade\GridViewSummary.cs" />
+    <Compile Include="Utilidade\GridViewSummaryList.cs" />
+    <Compile Include="Utilidade\JavaScript.cs" />
+    <Compile Include="Utilidade\Ordenador.cs" />
+    <Compile Include="Utilidade\Retorno.cs" />
+    <Compile Include="Utilidade\UtdDropDownList.cs" />
+    <Compile Include="Utilidade\UtdString.cs" />
+    <Compile Include="Utilidade\UtdValidador.cs" />
+    <Compile Include="Utilidade\UtilidadeWeb.cs" />
+    <Compile Include="Utilidade\Validador.cs" />
+    <Compile Include="WebReferences\wsgestaomaterial.seplag.ce.gov.br\Reference.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+</Project>

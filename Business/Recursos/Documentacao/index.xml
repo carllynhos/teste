@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>/home/cti/wanialdo/Documents/Solucoes/LicitarIntegrado/Web/bin/Licitar</name>
+    </assembly>
+    <members>
+        <member name="T:Licitar.Principal">
+            <summary>
+            Master Page padrão do projeto.
+            </summary>
+        </member>
+        <member name="T:Licitar.Erro">
+            <class>Erro</class>
+            <summary>
+            Classe para captura de erros na aplica��o e alerta � equipe de desenvolvimento.
+            </summary>
+        </member>
+        <member name="M:Licitar.Erro.#ctor">
+            <summary>
+            Construtor Padr�o
+            </summary>
+        </member>
+        <member name="P:Licitar.Erro.Usuario">
+            <value>
+            Usu�rio
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Browser">
+            <value>
+            Browser
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.VersaoBrowser">
+            <value>
+            Vers�o do Browser
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.SistemaOperacional">
+            <value>
+            Sistema Operacional
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.PaginaErro">
+            <value>
+            P�gina
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.MensagemErro">
+            <value>
+            Mensagem de Erro
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Data">
+            <value>
+            Data da Ocorr�ncia
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.MensagemApresentada">
+            <value>
+            Mensagem Apresentada
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Aplicacao">
+            <value>
+            Aplica��o
+            </value>
+        </member>
+        <member name="P:Licitar.Erro.Mensagem">
+            <value>
+            Mensagem do email
+            </value>
+        </member>
+        <member name="M:Licitar.Erro.InformarErro">
+            <summary>
+            Envia um e-mail informando o erro ocorrido na aplica��o.
+            </summary>
+        </member>
+        <member name="T:Licitar.Retorno">
+            <class>Retorno</class>
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Licitar.Validador">
+            <class>Validador</class>
+            <summary>
+            Classe para validação de valores diversos.
+            </summary>
+        </member>
+        <member name="M:Licitar.Validador.ValidarData(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Verifica se uma data é válida, e se está dentro de um período.
+            </summary>
+        </member>
+        <member name="M:Licitar.Validador.ValidarCPF(System.String)">
+            <summary>
+            Verifica se um determinado CPF é válido.
+            </summary>
+        </member>
+        <member name="M:Licitar.Validador.ValidarCNPJ(System.String)">
+            <summary>
+            Verifica se um determinado CNPJ é válido.
+            </summary>
+        </member>
+        <member name="M:Licitar.Validador.ValidarPis(System.String)">
+            <summary>
+            Verifica se um determinado PIS é válido.
+            </summary>
+        </member>
+        <member name="T:Licitar.eMail">
+            <class>eMail</class>
+            <summary>
+            Classe para envio de email pelo .Net Framework
+            </summary>
+        </member>
+        <member name="M:Licitar.eMail.#ctor">
+            <summary>
+            Construtor padrão. Configura o servidor e o remetente padrão de e-mail do sistema.
+            </summary>
+        </member>
+        <member name="P:Licitar.eMail.Remetente">
+            <value>
+            Remetente do e-mail.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.Senha">
+            <value>
+            Senha da caixa de e-mail.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.SmtpServer">
+            <value>
+            Servidor SMTP.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.Smtp_Aut">
+            <value>
+            Tipo de autenticação do servidor SMTP.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.Para">
+            <value>
+            Destinatário do e-mail.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.ComCopia">
+            <value>
+            Destinatários 'com cópia'.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.CopiaOculta">
+            <value>
+            Destinatários 'com cópia oculta'.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.Assunto">
+            <value>
+            Assunto do e-mail.
+            </value>
+        </member>
+        <member name="P:Licitar.eMail.Mensagem">
+            <value>
+            Corpo da mensagem.
+            </value>
+        </member>
+        <member name="M:Licitar.eMail.Enviar">
+            <summary>
+            Envia o e-mail usando System.Net.Mail
+            </summary>
+        </member>
+        <member name="T:Operacional.pgConLicitacao">
+            <summary>
+            pgConLicitacao class.
+            </summary>
+            <remarks>
+            Auto-generated class.
+            </remarks>
+        </member>
+    </members>
+</doc>
