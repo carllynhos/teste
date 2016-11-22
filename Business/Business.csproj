@@ -182,8 +182,6 @@
     <Compile Include="Entidade\ValorReplica.cs" />
     <Compile Include="Entidade\Workflow.cs" />
     <Compile Include="Persistencia\ConsultaXML.cs" />
-    <Compile Include="Persistencia\DAOAssociacao.cs" />
-    <Compile Include="Persistencia\DAOConsultaProcesso.cs" />
     <Compile Include="Persistencia\PostgreSqlConnection.cs" />
     <Compile Include="Persistencia\PostgreSqlDatabase.cs" />
     <Compile Include="Servico\ConsultasGerais.cs" />
@@ -272,5 +270,50 @@
     <Compile Include="Utilidade\Validador.cs" />
     <Compile Include="WebReferences\wsgestaomaterial.seplag.ce.gov.br\Reference.cs" />
     <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Castle.ActiveRecord">
+      <HintPath>bin\Debug\Castle.ActiveRecord.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Components.Validator">
+      <HintPath>bin\Debug\Castle.Components.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>bin\Debug\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy">
+      <HintPath>bin\Debug\Castle.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Graficos">
+      <HintPath>bin\Debug\Graficos.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>bin\Debug\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Licitar.Business">
+      <HintPath>bin\Debug\Licitar.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>bin\Debug\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="WebChart">
+      <HintPath>bin\Debug\WebChart.dll</HintPath>
+    </Reference>
+    <Reference Include="WebServiceSeplag">
+      <HintPath>bin\Debug\WebServiceSeplag.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
 </Project>

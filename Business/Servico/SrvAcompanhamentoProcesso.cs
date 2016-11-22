@@ -23,7 +23,6 @@ using Licitar.Business.Dao;
 using Licitar.Business.Utilidade;
 using System.Data;
 using Licitar.Business.Persistencia;
-using System.Data;
 using Npgsql;
 
 namespace Licitar.Business.Servico
