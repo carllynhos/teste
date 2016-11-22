@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "..\CEARA\LICITAR\LicitarCe\Business\Business.csproj", "{57232157-270B-4DF2-BDF9-4232166ED82E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendario", "..\CEARA\LICITAR\LicitarCe\Calendario\Calendario.csproj", "{0E00C25A-28CA-4A9D-A36C-F3442448BA17}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Licitar", "..\CEARA\LICITAR\LicitarCe\Licitar.csproj", "{A4069337-CD36-4A59-A897-299D49F5F289}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteWebService", "..\CEARA\LICITAR\LicitarCe\TesteWebService\TesteWebService.csproj", "{39FE1CD5-B805-4BBF-8806-7C80746A011A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendario", "..\CEARA\LICITAR\LicitarCe\Calendario\Calendario.csproj", "{B277D79C-73CF-4DB8-9A33-3A7FEEE85DAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,24 +11,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E00C25A-28CA-4A9D-A36C-F3442448BA17}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0E00C25A-28CA-4A9D-A36C-F3442448BA17}.Debug|x86.Build.0 = Debug|Any CPU
-		{0E00C25A-28CA-4A9D-A36C-F3442448BA17}.Release|x86.ActiveCfg = Release|Any CPU
-		{0E00C25A-28CA-4A9D-A36C-F3442448BA17}.Release|x86.Build.0 = Release|Any CPU
-		{39FE1CD5-B805-4BBF-8806-7C80746A011A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{39FE1CD5-B805-4BBF-8806-7C80746A011A}.Debug|x86.Build.0 = Debug|Any CPU
-		{39FE1CD5-B805-4BBF-8806-7C80746A011A}.Release|x86.ActiveCfg = Release|Any CPU
-		{39FE1CD5-B805-4BBF-8806-7C80746A011A}.Release|x86.Build.0 = Release|Any CPU
-		{57232157-270B-4DF2-BDF9-4232166ED82E}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{57232157-270B-4DF2-BDF9-4232166ED82E}.Debug|x86.Build.0 = Debug|Any CPU
-		{57232157-270B-4DF2-BDF9-4232166ED82E}.Release|x86.ActiveCfg = Release|Any CPU
-		{57232157-270B-4DF2-BDF9-4232166ED82E}.Release|x86.Build.0 = Release|Any CPU
-		{A4069337-CD36-4A59-A897-299D49F5F289}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A4069337-CD36-4A59-A897-299D49F5F289}.Debug|x86.Build.0 = Debug|Any CPU
-		{A4069337-CD36-4A59-A897-299D49F5F289}.Release|x86.ActiveCfg = Release|Any CPU
-		{A4069337-CD36-4A59-A897-299D49F5F289}.Release|x86.Build.0 = Release|Any CPU
+		{B277D79C-73CF-4DB8-9A33-3A7FEEE85DAA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B277D79C-73CF-4DB8-9A33-3A7FEEE85DAA}.Debug|x86.Build.0 = Debug|Any CPU
+		{B277D79C-73CF-4DB8-9A33-3A7FEEE85DAA}.Release|x86.ActiveCfg = Release|Any CPU
+		{B277D79C-73CF-4DB8-9A33-3A7FEEE85DAA}.Release|x86.Build.0 = Release|Any CPU
+		{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}.Debug|x86.ActiveCfg = Debug|x86
+		{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}.Debug|x86.Build.0 = Debug|x86
+		{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}.Release|x86.ActiveCfg = Release|x86
+		{E2CAD8F7-8F4F-422D-B015-55F09CA4D0BE}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ..\CEARA\LICITAR\LicitarCe\Licitar.csproj
+		StartupItem = Business\Business.csproj
 	EndGlobalSection
 EndGlobal
