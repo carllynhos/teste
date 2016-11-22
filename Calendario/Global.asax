@@ -1,0 +1,1 @@
+<%@ Application CodeBehind="Global.asax.cs" Inherits="Calendario_LIcitacao.Global" %>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09BD651B-4EAF-4BF1-9CF6-F7E4EB031CA5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Calendario</RootNamespace>
+    <AssemblyName>Calendario</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="App_Code\clDBCalendario.cs" />
+    <Compile Include="Controles\ucCalendarioPregao.ascx.cs" />
+    <Compile Include="Controles\ucCalendarioPregao.ascx.designer.cs" />
+    <Compile Include="Default.aspx.cs" />
+    <Compile Include="Default.aspx.designer.cs" />
+    <Compile Include="Global.asax.cs" />
+    <Compile Include="pgCalendario.aspx.cs" />
+    <Compile Include="pgCalendario.aspx.designer.cs" />
+    <Compile Include="pgTeste.aspx.cs" />
+    <Compile Include="pgTeste.aspx.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Calendario.dll" />
+    <None Include="bin\Calendario.dll.mdb" />
+    <None Include="bin\Default.aspx" />
+    <None Include="bin\Global.asax" />
+    <None Include="bin\Npgsql.dll" />
+    <None Include="bin\web.config" />
+    <None Include="Controles\ucCalendarioPregao.ascx" />
+    <None Include="Calendario.csproj" />
+    <None Include="Default.aspx" />
+    <None Include="estilo.css" />
+    <None Include="Global.asax" />
+    <None Include="pgCalendario.aspx" />
+    <None Include="pgTeste.aspx" />
+    <None Include="web.config" />
+  </ItemGroup>
+</Project>
